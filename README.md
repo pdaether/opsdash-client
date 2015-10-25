@@ -6,6 +6,10 @@ It requires NodeJS >= 4.0.0
 
 At the moment this is a beta version and still under heavy development, so the interface of this module can still change!
 
+![Memory example](http://pdaether.github.io/images/opsdash-client/opsDash_node_memory.png)
+
+![Uptime example](http://pdaether.github.io/images/opsdash-client/opsDash_node_uptime.png)
+
 ## Install
 
 ```bash
@@ -38,10 +42,11 @@ The option object can have the following attributes:
 
 The opsDashClient can send the following metrics of your node process:
 
-- memory.rss
-- memory.heapUsed
-- memory.heapTotal
-- cpu (CPU usage in %)
+- **memory.rss**
+- **memory.heapUsed**
+- **memory.heapTotal**
+- **cpu** (CPU usage in %)
+- **uptime** (uptime of your node process in seconds - great to identify crashes or restarts)
 
 If you instantiate your reporter with `reportProcessMetrics` set to `true`, then this metrics will be reported automatically.
 
