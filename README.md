@@ -22,7 +22,7 @@ npm install --save opsdash-client
 let opsDashClient = require('opsdash-client')
 
 let opsDashReporter = opsDashClient({
-  server: 'http://yourOpsDashServer',
+  server: 'http://yourOpsDashDomain:8080',
   interval: 30,
   source: 'expressApp-' + opsDashClient.hostname
 })
@@ -31,9 +31,7 @@ let opsDashReporter = opsDashClient({
 The option object can have the following attributes:
 
 
-- **server:** Your OpsDash server.
-- **tcpPort:** The port of the OpsDash server for sending reports.
-- **protocol:** Which protocol to use (`tcp` or `udp`).
+- **server:** Address of your  OpsDash server including the port.
 - **interval:** Default interval for sending metrics in seconds.
 - **reportProcessMetrics:** Boolean, default `true`. Should the opsDashClient automatically send process reports (details see below).
 - **source:** Name of the source.
@@ -148,7 +146,6 @@ opsDashReporter.on('error', function(err){
 
 ## TODO
 
-- UDP support
 - Improve error handling
 - Writing tests
 - Check usage in cluster mode

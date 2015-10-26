@@ -8,8 +8,6 @@ var processReporter = require('./reporter/processReporter')
 
 let defaultOptions = {
   server: null,               //opsDash server
-  tcpPort: 6273,              //opsDash server port
-  protocol: 'tcp',            //wich protocol to use, 'tcp' or 'udp'
   interval: 60,               //defaut interval to send the metrics
   reportProcessMetrics: true, //Report cpu, memory etc.
   source: null                //source name

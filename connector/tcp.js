@@ -7,17 +7,16 @@ class tcpConnector {
   constructor(options){
     this.options = options
     this.options.uri = this.options.server
-      + ':' + this.options.tcpPort
       + '/pubapi/v1/report'
   }
 
-  send(data, cb){      
-      request({
-        uri: this.options.uri,
-        body: data,
-        json: true,
-        method: 'post'
-      }, cb)
+  send(data, cb){
+    request({
+      uri: this.options.uri,
+      body: data,
+      json: true,
+      method: 'post'
+    }, cb)
   }
 }
 
