@@ -4,8 +4,6 @@ This is a node client for the [OpsDash Server Monitor](https://www.opsdash.com/)
 
 It requires NodeJS >= 4.0.0
 
-At the moment this is a beta version and still under heavy development, so the interface of this module can still change!
-
 ![Memory example](http://pdaether.github.io/images/opsdash-client/opsDash_node_memory.png)
 
 ![Uptime example](http://pdaether.github.io/images/opsdash-client/opsDash_node_uptime.png)
