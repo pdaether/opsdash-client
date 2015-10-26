@@ -3,12 +3,13 @@
   "version": "0.2.0",
   "description": "NodeJS client for the OpsDash Server Monitor",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/pdaether/opsdash-client.git"
+    "type": "git",
+    "url": "https://github.com/pdaether/opsdash-client.git"
   },
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/mocha/bin/_mocha -R spec",
+    "coverage": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- --ui bdd -R spec"
   },
   "keywords": [
     "OpsDash",
@@ -19,5 +20,11 @@
   "dependencies": {
     "request": "^2.65.0",
     "usage": "^0.7.1"
+  },
+  "devDependencies": {
+    "chai": "^3.4.0",
+    "istanbul": "^0.4.0",
+    "mocha": "^2.3.3",
+    "nock": "^2.15.0"
   }
 }
