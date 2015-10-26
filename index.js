@@ -1,13 +1,13 @@
 'use strict'
 
-let EventEmitter  = require('events').EventEmitter
-let tcpConnector = require('./connector/tcp')
-let os = require("os");
-var processReporter = require('./reporter/processReporter')
+let EventEmitter    = require('events').EventEmitter
+let tcpConnector    = require('./connector/tcp')
+let os              = require("os");
+let processReporter = require('./reporter/processReporter')
 
 
-let defaultOptions = {
-  server: null,               //opsDash server
+const defaultOptions = {
+  server: 'http://localhost',  //opsDash server
   interval: 60,               //defaut interval to send the metrics
   reportProcessMetrics: true, //Report cpu, memory etc.
   source: null                //source name
@@ -160,6 +160,7 @@ function opsDashClient(options){
     options = Object.assign({}, defaultOptions)
   }
 
+  //Set default source if not set
   if(!options.source){
     options.source = os.hostname()
   }
