@@ -1,6 +1,6 @@
 # OpsDash Client for NodeJS
 
-This is a node client for the [OpsDash Server Monitor](https://www.opsdash.com/). You can report process metrics like memory and cpu usage and of cause your own individual metrics.
+This is a node client for the [OpsDash Server Monitor](https://www.opsdash.com/). You can report process metrics like memory and cpu usage and of course your own individual metrics.
 
 It requires NodeJS >= 4.0.0
 
