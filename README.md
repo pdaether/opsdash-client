@@ -44,7 +44,7 @@ The opsDashClient can send the following metrics of your node process:
 - **cpu** (CPU usage in %)
 - **uptime** (uptime of your node process in seconds - great to identify crashes or restarts)
 
-If you instantiate your reporter with `reportProcessMetrics` set to `true`, then this metrics will be reported automatically.
+If you instantiate your reporter with `reportProcessMetrics` set to `true`, then this metrics will be reported automatically (default).
 
 Otherwise you can start sending this metrics manually:
 
@@ -96,7 +96,7 @@ Options:
 
 - **type:** In case of simple values, this must be `value`
 - **start:** Boolean, should we stat the reporting automatically?
-- **reset:** Boolean. If `true`, the value will be reseted after every report interval, default `false`
+- **reset:** Boolean. If `true`, the value will be reseted after every report interval, default `true`
 - **startValue:** The initial value of your metric, default `0`
 - **interval:** The reporting interval in seconds. If not set, the default interval will be used.
 
@@ -144,6 +144,6 @@ opsDashReporter.on('error', function(err){
 
 ## TODO
 
+- Support Basic Auth
 - Improve error handling
-- Writing tests
 - Check usage in cluster mode

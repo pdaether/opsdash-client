@@ -38,7 +38,7 @@ class opsDashReporter {
       this.metrics[name] = {
         type: options.type,
         value: options.startValue || 0,
-        reset: options.reset || false,
+        reset: options.reset || true,
         callback: cb,
         interval: options.interval || this.options.interval,
         intervalObj: undefined
@@ -92,26 +92,30 @@ class opsDashReporter {
 
     if(this.metrics[name].intervalObj !== undefined){
         clearInterval(this.metrics[name].intervalObj)
+        this.metrics[name].intervalObj = undefined
     }
     return this
   }
 
   incMetric(name, value){
-    if(!this.metrics.hasOwnProperty(name)) return this;
-    this.metrics[name].value += value ? value : 1;
+    if(this.metrics.hasOwnProperty(name)){
+      this.metrics[name].value += value ? value : 1;
+    }
     return this
   }
 
   setMetricValue(name, value) {
-    if(!this.metrics.hasOwnProperty(name)) return this;
-    this.metrics[name].value = value;
+    if(this.metrics.hasOwnProperty(name)){
+      this.metrics[name].value = value;
+    }
     return this
   }
 
   removeMetric(name) {
-    if(!this.metrics.hasOwnProperty(name)) return this;
-    this.stopMetric(name);
-    delete this.metrics[name]
+    if(this.metrics.hasOwnProperty(name)){
+      this.stopMetric(name);
+      delete this.metrics[name]
+    }
     return this
   }
 

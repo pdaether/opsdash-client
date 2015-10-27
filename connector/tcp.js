@@ -16,7 +16,15 @@ class tcpConnector {
       body: data,
       json: true,
       method: 'post'
-    }, cb)
+    }, function(err, response){
+      if(err) return cb(err)
+      if(response.statusCode < 200 || response.statusCode >= 300){
+        return cb(new Error(
+          'Bad status code while sending metric: ' + response.statusCode
+        ))
+      }
+      cb(null)
+    })
   }
 }
 
