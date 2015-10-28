@@ -18,6 +18,9 @@
   ],
   "author": "Patrick Daether, https://github.com/pdaether",
   "license": "MIT",
+  "engines": {
+    "node": ">= 4.0.x"
+  },
   "dependencies": {
     "request": "^2.65.0",
     "usage": "^0.7.1"
