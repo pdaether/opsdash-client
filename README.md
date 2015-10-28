@@ -2,7 +2,7 @@
 
 [![Code Climate](https://codeclimate.com/github/pdaether/opsdash-client/badges/gpa.svg)](https://codeclimate.com/github/pdaether/opsdash-client)
 [![Dependency Status](https://gemnasium.com/pdaether/opsdash-client.svg)](https://gemnasium.com/pdaether/opsdash-client)
-[![NPM Version](https://img.shields.io/npm/v/opsdash-client.svg)][https://npmjs.org/package/opsdash-client]
+[![NPM Version](https://img.shields.io/npm/v/opsdash-client.svg)](https://npmjs.org/package/opsdash-client)
 
 This is a node client for the [OpsDash Server Monitor](https://www.opsdash.com/). You can report process metrics like memory and cpu usage and of course your own individual metrics.
 
